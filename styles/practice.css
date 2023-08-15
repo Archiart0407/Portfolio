@@ -1,0 +1,36 @@
+.main-container{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.image-container img {
+    position: absolute;
+    z-index: 1;
+}
+
+.content {
+    border: 1px solid blue;
+    z-index: -1;
+    padding-left: 200px;
+    margin-left: -150px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+}
+
+@keyframes rotate45 {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+.img-container img {
+    transition: transform 1s;
+}
+
+.img-container.rotating img {
+    transform: rotate(45deg);
+}
