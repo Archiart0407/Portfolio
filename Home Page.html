@@ -68,7 +68,7 @@
         <div class="row">
             <div class="column">
                 <div class="second-heading">
-                    <h1>Our Services</h1>
+                    <h2>Our Services</h2>
                     <hr>
                 </div>
                 <div class="second-main-content">
@@ -97,5 +97,140 @@
             </div>
         </div>
     </div>
+    <div class="third-section">
+        <div class="slider-section">
+            <div class="slide-track">
+              <div class="slide">
+                <img src="images/Logos/logo-pirelli2x.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/michelin-logo 1.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Motul Logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Repsol Logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/yokohama-vector-logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Top-1-Rusos_Logo-1.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/logo-pirelli2x.jpg" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/michelin-logo 1.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Motul Logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Repsol Logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/yokohama-vector-logo.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="images/Logos/Top-1-Rusos_Logo-1.png" alt="">
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="fourth-section">
+        <div class="row">
+            <div class="column">
+                <div class="top-content-heading">
+                    <h2>Our Products</h2>
+                    <hr>
+                </div>
+                <div class="grid-container-f">
+                    <div class="grid-one-f">
+                        <div class="g-img-f">
+                            <img src="images/gas 1.png" alt="">
+                        </div>
+                        <div class="g-content-f">
+                            <h3>Motorcycle Oils</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <div class="btn-g-f">
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-two-f">
+                        <div class="g-img-f">
+                            <img src="images/automobile 1.png" alt="">
+                        </div>
+                        <div class="g-content-f">
+                            <h3>Motorcycle Oils</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <div class="btn-g-f">
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-three-f">
+                        <div class="g-img-f">
+                            <img src="images/mechanic-working 1.png" alt="">
+                        </div>
+                        <div class="g-content-f">
+                            <h3>Motorcycle Oils</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <div class="btn-g-f">
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-four-f">
+                        <div class="g-img-f">
+                            <img src="images/mechanic-working 1.png" alt="">
+                        </div>
+                        <div class="g-content-f">
+                            <h3>Motorcycle Oils</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <div class="btn-g-f">
+                                <a href="">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+    const slider = document.querySelector('.slide-track');
+const slides = slider.querySelectorAll('.slide');
+const slideWidth = 250; // Width of each slide
+let scrollPosition = 0;
+
+// Clone the slides and append them to the end of the slider
+slides.forEach((slide) => {
+  const clone = slide.cloneNode(true);
+  slider.appendChild(clone);
+});
+
+// Animation function
+function animate() {
+  scrollPosition -= 2 ; // Adjust the scroll speed as needed
+  slider.style.transform = `translateX(${scrollPosition}px)`;
+
+  if (scrollPosition <= -slideWidth * slides.length) {
+    // Reset scroll position when all cloned slides have passed
+    scrollPosition = 0;
+  }
+
+  requestAnimationFrame(animate);
+}
+
+// Start the animation
+animate();
+
+</script>
 </body>
 </html>
