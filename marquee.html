@@ -7,72 +7,22 @@
 
 <style>
 
-@import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
-
-
-.container {
-  min-height: 10vh;
-  --space: 2rem;
-  background-color: antiquewhite;
-align-content: center;
-overflow: hidden;
-gap: var(--space);
-width: 100%;
-font-family: "Corben", system-ui, sans-serif;
-font-size: 1.5rem;
-line-height: 1.5;
+h1 {
+  font-size: 80px;
 }
 
-.marquee {
-  --gap: var(--space);
-
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  gap: var(--gap);
+h1:after {
+  display: inline-flex;
+  content: "";
+  background-image: url(images/Curved\ Line.png);
 }
-
-.marquee__group {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: var(--gap);
-  min-width: 100%;
-  animation: scroll 8000ms linear infinite;
-}
-
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-100% - var(--gap)));
-  }
-}
-
 
 </style>
 
 </head>
 <body>
 
-    <div class="container">
-    <div class="marquee marquee--borders">
-        <div class="marquee__group">
-          <p>The Dogs of Unsplash</p>
-          <p>The Dogs of Unsplash</p>
-          <p>The Dogs of Unsplash</p>
-        </div>
-        <div class="marquee__group">
-          <p>The Dogs of Unsplash</p>
-          <p>The Dogs of Unsplash</p>
-          <p>The Dogs of Unsplash</p>
-        </div>
-      </div>
-      </div>
+  <h1>Hello There</h1>
 
 <script>
 //     const content = document.querySelector('.content');
